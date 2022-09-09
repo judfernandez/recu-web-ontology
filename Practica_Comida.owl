@@ -9,6 +9,31 @@
 <http://www.semanticweb.org/joker/ontologies/2022/7/videogames> rdf:type owl:Ontology .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene
+:Contiene rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Sabor_similar
+:Sabor_similar rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#hace_Parte_De
+:hace_Parte_De rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Nivel_de_acidez
+:Nivel_de_acidez rdf:type owl:DatatypeProperty ;
+                 rdfs:label 200 .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -32,74 +57,9 @@
        rdfs:subClassOf :Fruta .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Aguacate
-:Aguacate rdf:type owl:Class ;
-          rdfs:subClassOf :Neutra .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ajo
-:Ajo rdf:type owl:Class ;
-     rdfs:subClassOf :Verdura .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Almeja
-:Almeja rdf:type owl:Class ;
-        rdfs:subClassOf :Molusco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Almendra
-:Almendra rdf:type owl:Class ;
-          rdfs:subClassOf :Frutoseco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Anchoa
-:Anchoa rdf:type owl:Class ;
-        rdfs:subClassOf :Pescado_azul .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arandano_rojo
-:Arandano_rojo rdf:type owl:Class ;
-               rdfs:subClassOf :Acido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arroz
-:Arroz rdf:type owl:Class ;
-       rdfs:subClassOf :Harina .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arveja
-:Arveja rdf:type owl:Class ;
-        rdfs:subClassOf :Legumbre .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Atun
-:Atun rdf:type owl:Class ;
-      rdfs:subClassOf :Pescado_azul .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Avena
-:Avena rdf:type owl:Class ;
-       rdfs:subClassOf :Cereal .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#B
 :B rdf:type owl:Class ;
    rdfs:subClassOf :Tamaño .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Bacalao
-:Bacalao rdf:type owl:Class ;
-         rdfs:subClassOf :Pescado_blanco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Banano
-:Banano rdf:type owl:Class ;
-        rdfs:subClassOf :Dulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Berenjena
-:Berenjena rdf:type owl:Class ;
-           rdfs:subClassOf :Verdura .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Blanco
@@ -107,39 +67,9 @@
         rdfs:subClassOf :Color .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Brocoli
-:Brocoli rdf:type owl:Class ;
-         rdfs:subClassOf :Verdura .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#C
 :C rdf:type owl:Class ;
    rdfs:subClassOf :Tamaño .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Caballo
-:Caballo rdf:type owl:Class ;
-         rdfs:subClassOf :Carne_roja .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cabra
-:Cabra rdf:type owl:Class ;
-       rdfs:subClassOf :Carne_roja .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Calamar
-:Calamar rdf:type owl:Class ;
-         rdfs:subClassOf :Molusco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Camaron
-:Camaron rdf:type owl:Class ;
-         rdfs:subClassOf :Crustaceo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cangrejo
-:Cangrejo rdf:type owl:Class ;
-          rdfs:subClassOf :Crustaceo .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Carne
@@ -157,34 +87,9 @@
             rdfs:subClassOf :Carne .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cebolla
-:Cebolla rdf:type owl:Class ;
-         rdfs:subClassOf :Verdura .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cerdo
-:Cerdo rdf:type owl:Class ;
-       rdfs:subClassOf :Carne_roja .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereal
 :Cereal rdf:type owl:Class ;
         rdfs:subClassOf :Grano .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereza
-:Cereza rdf:type owl:Class ;
-        rdfs:subClassOf :Dulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ciruela
-:Ciruela rdf:type owl:Class ;
-         rdfs:subClassOf :SemiAcido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Coco
-:Coco rdf:type owl:Class ;
-      rdfs:subClassOf :Neutra .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Color
@@ -196,24 +101,9 @@
 :Comida rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Conejo
-:Conejo rdf:type owl:Class ;
-        rdfs:subClassOf :Carne_blanca .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cordero
-:Cordero rdf:type owl:Class ;
-         rdfs:subClassOf :Carne_roja .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Crustaceo
 :Crustaceo rdf:type owl:Class ;
            rdfs:subClassOf :Marisco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Curcuma
-:Curcuma rdf:type owl:Class ;
-         rdfs:subClassOf :Tuberculo .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Derivado
@@ -221,39 +111,9 @@
           rdfs:subClassOf :Lacteos_y_Derivado .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Dorada
-:Dorada rdf:type owl:Class ;
-        rdfs:subClassOf :Semigraso .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Dulce
 :Dulce rdf:type owl:Class ;
        rdfs:subClassOf :Fruta .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Durazno
-:Durazno rdf:type owl:Class ;
-         rdfs:subClassOf :SemiAcido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Espinaca
-:Espinaca rdf:type owl:Class ;
-          rdfs:subClassOf :Verdura .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frambuesa
-:Frambuesa rdf:type owl:Class ;
-           rdfs:subClassOf :Acido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fresa
-:Fresa rdf:type owl:Class ;
-       rdfs:subClassOf :Acido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frijol
-:Frijol rdf:type owl:Class ;
-        rdfs:subClassOf :Legumbre .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fruta
@@ -266,29 +126,9 @@
            rdfs:subClassOf :Tuberculo_Legumbre_Frutoseco .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Garbanzo
-:Garbanzo rdf:type owl:Class ;
-          rdfs:subClassOf :Legumbre .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Granada
-:Granada rdf:type owl:Class ;
-         rdfs:subClassOf :SemiAcido .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Grano
 :Grano rdf:type owl:Class ;
        rdfs:subClassOf :Comida .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Guanabana
-:Guanabana rdf:type owl:Class ;
-           rdfs:subClassOf :Semidulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Guayaba
-:Guayaba rdf:type owl:Class ;
-         rdfs:subClassOf :Acido .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Harina
@@ -296,19 +136,9 @@
         rdfs:subClassOf :Grano .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Higo
-:Higo rdf:type owl:Class ;
-      rdfs:subClassOf :Dulce .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Huevo
 :Huevo rdf:type owl:Class ;
        rdfs:subClassOf :Proteina .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Jengibre
-:Jengibre rdf:type owl:Class ;
-          rdfs:subClassOf :Tuberculo .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Jumbo
@@ -326,74 +156,9 @@
                     rdfs:subClassOf :Comida .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Langosta
-:Langosta rdf:type owl:Class ;
-          rdfs:subClassOf :Crustaceo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lechuga
-:Lechuga rdf:type owl:Class ;
-         rdfs:subClassOf :Verdura .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Legumbre
 :Legumbre rdf:type owl:Class ;
           rdfs:subClassOf :Tuberculo_Legumbre_Frutoseco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lenguado
-:Lenguado rdf:type owl:Class ;
-          rdfs:subClassOf :Pescado_blanco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lenteja
-:Lenteja rdf:type owl:Class ;
-         rdfs:subClassOf :Legumbre .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Limon
-:Limon rdf:type owl:Class ;
-       rdfs:subClassOf :Acido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lubina
-:Lubina rdf:type owl:Class ;
-        rdfs:subClassOf :Pescado_blanco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Maiz
-:Maiz rdf:type owl:Class ;
-      rdfs:subClassOf :Cereal .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mandarina
-:Mandarina rdf:type owl:Class ;
-           rdfs:subClassOf :SemiAcido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mango
-:Mango rdf:type owl:Class ;
-       rdfs:subClassOf :Semidulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mani
-:Mani rdf:type owl:Class ;
-      rdfs:subClassOf :Frutoseco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Manzana_roja
-:Manzana_roja rdf:type owl:Class ;
-              rdfs:subClassOf :Dulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Manzana_verde
-:Manzana_verde rdf:type owl:Class ;
-               rdfs:subClassOf :SemiAcido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Maracuya
-:Maracuya rdf:type owl:Class ;
-          rdfs:subClassOf :Acido .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Marisco
@@ -406,29 +171,9 @@
         rdfs:subClassOf :Color .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Melon
-:Melon rdf:type owl:Class ;
-       rdfs:subClassOf :Dulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Merlusa
-:Merlusa rdf:type owl:Class ;
-         rdfs:subClassOf :Pescado_blanco .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Molusco
 :Molusco rdf:type owl:Class ;
          rdfs:subClassOf :Marisco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mora
-:Mora rdf:type owl:Class ;
-      rdfs:subClassOf :Acido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Naranja
-:Naranja rdf:type owl:Class ;
-         rdfs:subClassOf :Acido .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Neutra
@@ -436,49 +181,9 @@
         rdfs:subClassOf :Fruta .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Nuez
-:Nuez rdf:type owl:Class ;
-      rdfs:subClassOf :Frutoseco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ostra
-:Ostra rdf:type owl:Class ;
-       rdfs:subClassOf :Molusco .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa
 :Papa rdf:type owl:Class ;
       rdfs:subClassOf :Tuberculo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa_criolla
-:Papa_criolla rdf:type owl:Class ;
-              rdfs:subClassOf :Papa .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa_negra
-:Papa_negra rdf:type owl:Class ;
-            rdfs:subClassOf :Papa .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papaya
-:Papaya rdf:type owl:Class ;
-        rdfs:subClassOf :Semidulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pavo
-:Pavo rdf:type owl:Class ;
-      rdfs:subClassOf :Carne_blanca .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pepino
-:Pepino rdf:type owl:Class ;
-        rdfs:subClassOf :Verdura .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pera
-:Pera rdf:type owl:Class ;
-      rdfs:subClassOf :Semidulce .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pescado
@@ -501,64 +206,9 @@
                    rdfs:subClassOf :Proteina .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pistacho
-:Pistacho rdf:type owl:Class ;
-          rdfs:subClassOf :Frutoseco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Piña
-:Piña rdf:type owl:Class ;
-      rdfs:subClassOf :Acido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pollo
-:Pollo rdf:type owl:Class ;
-       rdfs:subClassOf :Carne_blanca .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Proteina
 :Proteina rdf:type owl:Class ;
           rdfs:subClassOf :Comida .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pulpo
-:Pulpo rdf:type owl:Class ;
-       rdfs:subClassOf :Molusco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Rabano
-:Rabano rdf:type owl:Class ;
-        rdfs:subClassOf :Tuberculo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Remolacha
-:Remolacha rdf:type owl:Class ;
-           rdfs:subClassOf :Tuberculo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Repollo
-:Repollo rdf:type owl:Class ;
-         rdfs:subClassOf :Verdura .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Res
-:Res rdf:type owl:Class ;
-     rdfs:subClassOf :Carne_roja .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Salmon
-:Salmon rdf:type owl:Class ;
-        rdfs:subClassOf :Pescado_azul .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Sandia
-:Sandia rdf:type owl:Class ;
-        rdfs:subClassOf :Dulce .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Sardina
-:Sardina rdf:type owl:Class ;
-         rdfs:subClassOf :Pescado_azul .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#SemiAcido
@@ -576,39 +226,9 @@
            rdfs:subClassOf :Pescado .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Semilla_girasol
-:Semilla_girasol rdf:type owl:Class ;
-                 rdfs:subClassOf :Frutoseco .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tamaño
 :Tamaño rdf:type owl:Class ;
         rdfs:subClassOf :Huevo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ternera
-:Ternera rdf:type owl:Class ;
-         rdfs:subClassOf :Carne_roja .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tomate
-:Tomate rdf:type owl:Class ;
-        rdfs:subClassOf :SemiAcido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Toronja
-:Toronja rdf:type owl:Class ;
-         rdfs:subClassOf :Acido .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Trigo
-:Trigo rdf:type owl:Class ;
-       rdfs:subClassOf :Harina .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Trucha
-:Trucha rdf:type owl:Class ;
-        rdfs:subClassOf :Semigraso .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tuberculo
@@ -621,29 +241,402 @@
                               rdfs:subClassOf :Comida .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Uva
-:Uva rdf:type owl:Class ;
-     rdfs:subClassOf :Semidulce .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Verdura
 :Verdura rdf:type owl:Class ;
          rdfs:subClassOf :Comida .
 
 
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Aguacate
+:Aguacate rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ajo
+:Ajo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Almeja
+:Almeja rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Almendra
+:Almendra rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Anchoa
+:Anchoa rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arandano_rojo
+:Arandano_rojo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arequipe
+:Arequipe rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arroz
+:Arroz rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arveja
+:Arveja rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Atun
+:Atun rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Avena
+:Avena rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Bacalao
+:Bacalao rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Banano
+:Banano rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Berenjena
+:Berenjena rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Brocoli
+:Brocoli rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Caballo
+:Caballo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cabra
+:Cabra rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Calamar
+:Calamar rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Camaron
+:Camaron rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cangrejo
+:Cangrejo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cebolla
+:Cebolla rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cerdo
+:Cerdo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereal
+:Cereal rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereza
+:Cereza rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ciruela
+:Ciruela rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Coco
+:Coco rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Conejo
+:Conejo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cordero
+:Cordero rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Curcuma
+:Curcuma rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Dorada
+:Dorada rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Durazno
+:Durazno rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Espinaca
+:Espinaca rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frambuesa
+:Frambuesa rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fresa
+:Fresa rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frijol
+:Frijol rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Garbanzo
+:Garbanzo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Granada
+:Granada rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Guanabana
+:Guanabana rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Guayaba
+:Guayaba rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Helado
+:Helado rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Higo
+:Higo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Jengibre
+:Jengibre rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Langosta
+:Langosta rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Leche
+:Leche rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Leche_condensada
+:Leche_condensada rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lechuga
+:Lechuga rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lenteja
+:Lenteja rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Limon
+:Limon rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Linguado
+:Linguado rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lubina
+:Lubina rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Maiz
+:Maiz rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mandarina
+:Mandarina rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mango
+:Mango rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mani
+:Mani rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Manzana_roja
+:Manzana_roja rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Manzana_verde
+:Manzana_verde rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Maracuya
+:Maracuya rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Melon
+:Melon rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Merlusa
+:Merlusa rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mora
+:Mora rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Naranja
+:Naranja rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Nuez
+:Nuez rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ostra
+:Ostra rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa_criolla
+:Papa_criolla rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa_negra
+:Papa_negra rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papaya
+:Papaya rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pavo
+:Pavo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pepino
+:Pepino rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pera
+:Pera rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pistacho
+:Pistacho rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Piña
+:Piña rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pollo
+:Pollo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pulpo
+:Pulpo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Queso
+:Queso rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ravano
+:Ravano rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Remolacha
+:Remolacha rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Repollo
+:Repollo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Res
+:Res rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Salmon
+:Salmon rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Sandia
+:Sandia rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Sardina
+:Sardina rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Semilla_girasol
+:Semilla_girasol rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ternera
+:Ternera rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tomate
+:Tomate rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Toronja
+:Toronja rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Trigo
+:Trigo rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Trucha
+:Trucha rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Uva
+:Uva rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Yuca
-:Yuca rdf:type owl:Class ;
-      rdfs:subClassOf :Tuberculo .
+:Yuca rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Zanahoria
-:Zanahoria rdf:type owl:Class ;
-           rdfs:subClassOf :Tuberculo .
+:Zanahoria rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ñame
-:Ñame rdf:type owl:Class ;
-      rdfs:subClassOf :Tuberculo .
+:Ñame rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Acido
+                :Dulce
+                :Neutra
+                :SemiAcido
+                :Semidulce
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Fruta
+                :Grano
+                :Lacteos_y_Derivado
+                :Proteina
+                :Tuberculo_Legumbre_Frutoseco
+                :Verdura
+              )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
