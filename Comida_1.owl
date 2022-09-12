@@ -21,6 +21,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/joker/ontologies/2022/7/food#Tiene -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/food#Tiene">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene">
@@ -127,6 +135,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Huevo"/>
             </owl:Restriction>
@@ -186,6 +200,42 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joker/ontologies/2022/7/food#Plato_no_vegetariano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/food#Plato_no_vegetariano">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegetariano"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joker/ontologies/2022/7/food#Plato_sin_carne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/food#Plato_sin_carne">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_con_carne"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
     </owl:Class>
     
 
@@ -477,19 +527,19 @@
     <!-- http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegano -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegano">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fruta"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Verdura"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -497,25 +547,25 @@
     <!-- http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegetariano -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegetariano">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fruta"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Huevo"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Verdura"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -536,6 +586,18 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Carne"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pescado_y_Marisco"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1271,6 +1333,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fruta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Grano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lacteos_y_Derivado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Proteina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tuberculo_Legumbre_Frutoseco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Verdura"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
