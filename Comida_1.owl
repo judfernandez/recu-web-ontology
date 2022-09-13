@@ -12,16 +12,20 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Tiene
-:Tiene rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf :Contiene .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene
 :Contiene rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :Tiene ;
           owl:inverseOf :hace_Parte_De ;
           rdf:type owl:InverseFunctionalProperty ;
           rdfs:domain :Comida .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tiene
+:Tiene rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       owl:propertyChainAxiom ( :Tiene
+                                :Contiene
+                              ) .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tiene_color
@@ -67,89 +71,6 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Barra_de_quesos
-:Barra_de_quesos rdf:type owl:Class ;
-                 rdfs:subClassOf :Platos ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :Contiene ;
-                                   owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
-                                   owl:onClass :Derivado
-                                 ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Desayuno
-:Desayuno rdf:type owl:Class ;
-          rdfs:subClassOf :Platos ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :Contiene ;
-                            owl:someValuesFrom :Cereal
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :Contiene ;
-                            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
-                            owl:onClass :Huevo
-                          ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Ensalada_de_frutas_acidas
-:Ensalada_de_frutas_acidas rdf:type owl:Class ;
-                           rdfs:subClassOf :Platos ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :Contiene ;
-                                             owl:someValuesFrom :Acido
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :Contiene ;
-                                             owl:someValuesFrom :SemiAcido
-                                           ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Papitas_fritas
-:Papitas_fritas rdf:type owl:Class ;
-                rdfs:subClassOf :Platos ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :Contiene ;
-                                  owl:allValuesFrom :Papa
-                                ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Picada_carne
-:Picada_carne rdf:type owl:Class ;
-              rdfs:subClassOf :Platos ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :Contiene ;
-                                owl:allValuesFrom [ rdf:type owl:Class ;
-                                                    owl:unionOf ( :Carne_blanca
-                                                                  :Carne_roja
-                                                                )
-                                                  ]
-                              ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Plato_no_vegetariano
-:Plato_no_vegetariano rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( :Platos
-                                                                 [ rdf:type owl:Class ;
-                                                                   owl:complementOf :Plato_Vegetariano
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf :Platos .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Plato_sin_carne
-:Plato_sin_carne rdf:type owl:Class ;
-                 owl:equivalentClass [ owl:intersectionOf ( :Platos
-                                                            [ rdf:type owl:Class ;
-                                                              owl:complementOf :Plato_con_carne
-                                                            ]
-                                                          ) ;
-                                       rdf:type owl:Class
-                                     ] ;
-                 rdfs:subClassOf :Platos .
-
-
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#A
 :A rdf:type owl:Class ;
    rdfs:subClassOf :Tamaño .
@@ -173,6 +94,16 @@
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#B
 :B rdf:type owl:Class ;
    rdfs:subClassOf :Tamaño .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Barra_de_quesos
+:Barra_de_quesos rdf:type owl:Class ;
+                 rdfs:subClassOf :Menu ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :Contiene ;
+                                   owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :Derivado
+                                 ] .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Blanco
@@ -211,7 +142,47 @@
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Comida
-:Comida rdf:type owl:Class .
+:Comida rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Barra_de_quesos
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Desayuno
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Ensalada_de_frutas_acidas
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Papitas_fritas
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Picada_carne
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Plato_Vegano
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Plato_Vegetariano
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Plato_con_carne
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Plato_no_vegetariano
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :Tiene ;
+                              owl:someValuesFrom :Plato_sin_carne
+                            ] .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Crustaceo
@@ -224,9 +195,36 @@
           rdfs:subClassOf :Lacteos .
 
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Desayuno
+:Desayuno rdf:type owl:Class ;
+          rdfs:subClassOf :Menu ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :Contiene ;
+                            owl:someValuesFrom :Cereal
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :Contiene ;
+                            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Huevo
+                          ] .
+
+
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Dulce
 :Dulce rdf:type owl:Class ;
        rdfs:subClassOf :Fruta .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ensalada_de_frutas_acidas
+:Ensalada_de_frutas_acidas rdf:type owl:Class ;
+                           rdfs:subClassOf :Menu ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :Contiene ;
+                                             owl:someValuesFrom :Acido
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :Contiene ;
+                                             owl:someValuesFrom :SemiAcido
+                                           ] .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fruta
@@ -294,6 +292,11 @@
         rdfs:subClassOf :Color .
 
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Menu
+:Menu rdf:type owl:Class ;
+      rdfs:subClassOf :Comida .
+
+
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Molusco
 :Molusco rdf:type owl:Class ;
          rdfs:subClassOf :Marisco .
@@ -307,6 +310,15 @@
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa
 :Papa rdf:type owl:Class ;
       rdfs:subClassOf :Tuberculo .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papitas_fritas
+:Papitas_fritas rdf:type owl:Class ;
+                rdfs:subClassOf :Menu ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :Contiene ;
+                                  owl:allValuesFrom :Papa
+                                ] .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pescado
@@ -329,9 +341,22 @@
                    rdfs:subClassOf :Proteina .
 
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Picada_carne
+:Picada_carne rdf:type owl:Class ;
+              rdfs:subClassOf :Menu ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :Contiene ;
+                                owl:allValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Carne_blanca
+                                                                  :Carne_roja
+                                                                )
+                                                  ]
+                              ] .
+
+
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegano
 :Plato_Vegano rdf:type owl:Class ;
-              rdfs:subClassOf :Platos ,
+              rdfs:subClassOf :Menu ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :Contiene ;
                                 owl:someValuesFrom :Fruta
@@ -344,7 +369,7 @@
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegetariano
 :Plato_Vegetariano rdf:type owl:Class ;
-                   rdfs:subClassOf :Platos ,
+                   rdfs:subClassOf :Menu ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :Contiene ;
                                      owl:someValuesFrom :Fruta
@@ -369,7 +394,7 @@
                                        owl:onProperty :Contiene ;
                                        owl:someValuesFrom :Pescado_y_Marisco
                                      ] ;
-                 rdfs:subClassOf :Platos ,
+                 rdfs:subClassOf :Menu ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :Contiene ;
                                    owl:someValuesFrom :Carne
@@ -380,9 +405,28 @@
                                  ] .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Platos
-:Platos rdf:type owl:Class ;
-        rdfs:subClassOf :Comida .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_no_vegetariano
+:Plato_no_vegetariano rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( :Menu
+                                                                 [ rdf:type owl:Class ;
+                                                                   owl:complementOf :Plato_Vegetariano
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf :Menu .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_sin_carne
+:Plato_sin_carne rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Menu
+                                                            [ rdf:type owl:Class ;
+                                                              owl:complementOf :Plato_con_carne
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Menu .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Proteina
@@ -870,7 +914,7 @@
   owl:members ( :Fruta
                 :Grano
                 :Lacteos_y_Derivado
-                :Platos
+                :Menu
                 :Proteina
                 :Tuberculo_Legumbre_Frutoseco
                 :Verdura
