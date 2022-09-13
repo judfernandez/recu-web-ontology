@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/joker/ontologies/2022/7/videogames#> .
+@prefix : <http://www.semanticweb.org/joker/ontologies/2022/7/food#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -12,868 +12,948 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Contiene
-:Contiene rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :Tiene ;
-          owl:inverseOf :hace_Parte_De ;
-          rdf:type owl:InverseFunctionalProperty ;
-          rdfs:domain :Comida .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene> ;
+                                                                     owl:inverseOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#hace_Parte_De> ;
+                                                                     rdf:type owl:InverseFunctionalProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                     rdfs:comment "Esta propiedad hace referencia a los elementos necesarios para la preparación de un plato" .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tiene
-:Tiene rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf owl:topObjectProperty ;
-       owl:propertyChainAxiom ( :Tiene
-                                :Contiene
-                              ) .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                  owl:propertyChainAxiom ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene>
+                                                                                           <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene>
+                                                                                         ) ;
+                                                                  rdfs:comment "Esta propiedad hace referencia a los platos contenidos en un menu" .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tiene_color
-:Tiene_color rdf:type owl:ObjectProperty ,
-                      owl:FunctionalProperty .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                        rdf:type owl:FunctionalProperty ;
+                                                                        rdfs:comment "Esta propiedad permite identificar el color de un alimento" .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tiene_color_similar
-:Tiene_color_similar rdf:type owl:ObjectProperty ,
-                              owl:TransitiveProperty ;
-                     rdfs:domain :Comida ;
-                     rdfs:range :Comida .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> rdf:type owl:ObjectProperty ,
+                                                                                         owl:TransitiveProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                                rdfs:range <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                                owl:propertyChainAxiom ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar>
+                                                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar>
+                                                                                                       ) ;
+                                                                                rdfs:comment "Esta propiedad es de caracter comparativo segun el color de los alimentos" .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tiene_sabor_similar
-:Tiene_sabor_similar rdf:type owl:ObjectProperty ,
-                              owl:SymmetricProperty ;
-                     rdfs:domain :Comida ;
-                     rdfs:range :Comida .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:subPropertyOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> ;
+                                                                                rdf:type owl:SymmetricProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                                rdfs:range <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                                rdfs:comment "Esta propiedad es de caracter comparativo segun el sabor de los alimentos" .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tiene_tamaño
-:Tiene_tamaño rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              rdf:type owl:FunctionalProperty .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_tamaño
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_tamaño> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                         rdf:type owl:FunctionalProperty ;
+                                                                         rdfs:comment "Esta propiedad permite identificar el tamaño de un alimento" .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#hace_Parte_De
-:hace_Parte_De rdf:type owl:ObjectProperty ,
-                        owl:FunctionalProperty .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#hace_Parte_De
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#hace_Parte_De> rdf:type owl:ObjectProperty ,
+                                                                                   owl:FunctionalProperty ;
+                                                                          rdfs:comment "Esta propiedad hace referencia a que un ingrediente hace parte de un plato" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Nivel_de_acidez
-:Nivel_de_acidez rdf:type owl:DatatypeProperty ;
-                 rdfs:label 200 .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nivel_de_acidez
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nivel_de_acidez> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:label 200 .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#A
-:A rdf:type owl:Class ;
-   rdfs:subClassOf :Tamaño .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#A
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#A> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
+                                                              rdfs:label "Es el tamaño mas pequeño de huevos"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#AA
-:AA rdf:type owl:Class ;
-    rdfs:subClassOf :Tamaño .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#AA
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#AA> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
+                                                               rdfs:label "Es el tamaño mas comun de huevos"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#AAA
-:AAA rdf:type owl:Class ;
-     rdfs:subClassOf :Tamaño .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#AAA
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#AAA> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
+                                                                rdfs:label "Es el tamaño mas grande de huevos de gallina"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Acido
-:Acido rdf:type owl:Class ;
-       rdfs:subClassOf :Fruta .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Acido
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Acido> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
+                                                                  rdfs:label "Es uno de los cinco sabores básicos detectados por las papilas gustativas de la lengua"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#B
-:B rdf:type owl:Class ;
-   rdfs:subClassOf :Tamaño .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#B
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#B> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
+                                                              rdfs:label "Es el tamaño mas pequeño de huevos de gallina"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Barra_de_quesos
-:Barra_de_quesos rdf:type owl:Class ;
-                 rdfs:subClassOf :Plato ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :Contiene ;
-                                   owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
-                                   owl:onClass :Derivado
-                                 ] .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Barra_de_quesos
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Barra_de_quesos> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                              owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Derivado>
+                                                                                            ] ;
+                                                                            rdfs:label "Plato conformado por diferentes tipos de quesos"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Blanco
-:Blanco rdf:type owl:Class ;
-        rdfs:subClassOf :Color .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Blanco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Blanco> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color> ;
+                                                                   rdfs:label "Huevos de color blanco principalmente provenientes de gallinas"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#C
-:C rdf:type owl:Class ;
-   rdfs:subClassOf :Tamaño .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#C
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#C> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
+                                                              rdfs:label "Es el tamaño de huevos provenientes de aves pequeñas como el de codornis"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Carne
-:Carne rdf:type owl:Class ;
-       rdfs:subClassOf :Proteina .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina> ;
+                                                                  rdfs:label "Normalmente tejido muscular proveniente de algun animal"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Carne_blanca
-:Carne_blanca rdf:type owl:Class ;
-              rdfs:subClassOf :Carne .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_blanca
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_blanca> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne> ;
+                                                                         rdfs:label "Carnes de origen animal diferentes a la res y el cerdo, se reconocen por su tonalidad blanca."@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Carne_roja
-:Carne_roja rdf:type owl:Class ;
-            rdfs:subClassOf :Carne .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_roja
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_roja> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne> ;
+                                                                       rdfs:label "Comunmente se refiere a carnes provenientes de la res o el cerdo se reconocen por su tonalidad rojiza"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereal
-:Cereal rdf:type owl:Class ;
-        rdfs:subClassOf :Grano .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Color
-:Color rdf:type owl:Class ;
-       rdfs:subClassOf :Huevo .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo> ;
+                                                                  rdfs:label "Categorización del huevo por la tonalidad de la cascara"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Comida
-:Comida rdf:type owl:Class .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> rdf:type owl:Class ;
+                                                                   rdfs:label "cualquier sustancia consumida para proporcionar apoyo nutricional a un ser vivo"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Crustaceo
-:Crustaceo rdf:type owl:Class ;
-           rdfs:subClassOf :Marisco .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Crustaceo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Crustaceo> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco> ;
+                                                                      rdfs:label "Animales comestibles, como las langostas, los cangrejos, los langostinos, los camarones y los percebes"@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Derivado
-:Derivado rdf:type owl:Class ;
-          rdfs:subClassOf :Lacteos .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Derivado
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Derivado> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos> ;
+                                                                     rdfs:label "Derivados de la leche como lo son, la mantequilla, el queso, entre otros."@es .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Desayuno
-:Desayuno rdf:type owl:Class ;
-          rdfs:subClassOf :Plato ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :Contiene ;
-                            owl:someValuesFrom :Cereal
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :Contiene ;
-                            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
-                            owl:onClass :Huevo
-                          ] .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Desayuno
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Desayuno> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                       owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                       owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                                                       owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo>
+                                                                                     ] ;
+                                                                     rdfs:label "Plato que se sirve principalmente en horas de la mañana el cual deberia contener un fuerte componente calorico."@es .
 
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Dulce
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Dulce> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
+                                                                  rdfs:label "Es uno de los cinco sabores básicos y de los únicos que es aceptado de manera global por todas las culturas y etnias de la tierra como uno de los sabores más placenteros"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Dulce
-:Dulce rdf:type owl:Class ;
-       rdfs:subClassOf :Fruta .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_de_frutas_acidas
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_de_frutas_acidas> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                        owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Acido>
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                        owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#SemiAcido>
+                                                                                                      ] ;
+                                                                                      rdfs:label "Plato conformado principalmente por frutas acidas"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ensalada_de_frutas_acidas
-:Ensalada_de_frutas_acidas rdf:type owl:Class ;
-                           rdfs:subClassOf :Plato ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :Contiene ;
-                                             owl:someValuesFrom :Acido
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :Contiene ;
-                                             owl:someValuesFrom :SemiAcido
-                                           ] .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                  rdfs:label "Son ricas en vitaminas, sales minerales y antioxidantes"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fruta
-:Fruta rdf:type owl:Class ;
-       rdfs:subClassOf :Comida .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frutoseco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frutoseco> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> ;
+                                                                      rdfs:label "Los frutos secos son alimentos muy energéticos, ricos en grasas, en proteínas, así como en oligoelementos"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frutoseco
-:Frutoseco rdf:type owl:Class ;
-           rdfs:subClassOf :Tuberculo_Legumbre_Frutoseco .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                  rdfs:label "Semilla pequeña, dura y seca, con o sin cáscara, cosechada para consumo humano o animal"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Grano
-:Grano rdf:type owl:Class ;
-       rdfs:subClassOf :Comida .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Harina
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Harina> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano> ;
+                                                                   rdfs:label "Es el polvo fino que se obtiene del cereal molido y de otros alimentos ricos en almidón"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Harina
-:Harina rdf:type owl:Class ;
-        rdfs:subClassOf :Grano .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color> ;
+                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                    owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color>
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_tamaño> ;
+                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                    owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño>
+                                                                                  ] ;
+                                                                  rdfs:label "Alimento alto en proteina proveniente de la gallina y otras aves."@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Huevo
-:Huevo rdf:type owl:Class ;
-       rdfs:subClassOf :Proteina ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :Tiene_color ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onClass :Color
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :Tiene_tamaño ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onClass :Tamaño
-                       ] .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Jumbo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Jumbo> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
+                                                                  rdfs:label "Es el tamaño mas grande  de huevos"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Jumbo
-:Jumbo rdf:type owl:Class ;
-       rdfs:subClassOf :Tamaño .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado> ;
+                                                                    rdfs:label "Que provienen de la leche, principalmente de origen animal."@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lacteos
-:Lacteos rdf:type owl:Class ;
-         rdfs:subClassOf :Lacteos_y_Derivado .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                               rdfs:label "Son productos altamente perecederos que deben mantener rigurosamente la cadena de frío"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lacteos_y_Derivado
-:Lacteos_y_Derivado rdf:type owl:Class ;
-                    rdfs:subClassOf :Comida .
 
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Legumbre
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Legumbre> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> ;
+                                                                     rdfs:label "Se denomina legumbre a la semilla contenida en las plantas de la familia de las leguminosas"@es .
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Legumbre
-:Legumbre rdf:type owl:Class ;
-          rdfs:subClassOf :Tuberculo_Legumbre_Frutoseco .
 
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Marisco
-:Marisco rdf:type owl:Class ;
-         rdfs:subClassOf :Pescado_y_Marisco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Marron
-:Marron rdf:type owl:Class ;
-        rdfs:subClassOf :Color .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Molusco
-:Molusco rdf:type owl:Class ;
-         rdfs:subClassOf :Marisco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Neutra
-:Neutra rdf:type owl:Class ;
-        rdfs:subClassOf :Fruta .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa
-:Papa rdf:type owl:Class ;
-      rdfs:subClassOf :Tuberculo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papitas_fritas
-:Papitas_fritas rdf:type owl:Class ;
-                rdfs:subClassOf :Plato ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :Contiene ;
-                                  owl:allValuesFrom :Papa
-                                ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pescado
-:Pescado rdf:type owl:Class ;
-         rdfs:subClassOf :Pescado_y_Marisco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pescado_azul
-:Pescado_azul rdf:type owl:Class ;
-              rdfs:subClassOf :Pescado .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pescado_blanco
-:Pescado_blanco rdf:type owl:Class ;
-                rdfs:subClassOf :Pescado .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pescado_y_Marisco
-:Pescado_y_Marisco rdf:type owl:Class ;
-                   rdfs:subClassOf :Proteina .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Picada_carne
-:Picada_carne rdf:type owl:Class ;
-              rdfs:subClassOf :Plato ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :Contiene ;
-                                owl:allValuesFrom [ rdf:type owl:Class ;
-                                                    owl:unionOf ( :Carne_blanca
-                                                                  :Carne_roja
-                                                                )
-                                                  ]
-                              ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato
-:Plato rdf:type owl:Class ;
-       rdfs:subClassOf :Comida .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegano
-:Plato_Vegano rdf:type owl:Class ;
-              rdfs:subClassOf :Plato ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :Contiene ;
-                                owl:someValuesFrom :Fruta
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :Contiene ;
-                                owl:someValuesFrom :Verdura
-                              ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_Vegetariano
-:Plato_Vegetariano rdf:type owl:Class ;
-                   rdfs:subClassOf :Plato ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :Contiene ;
-                                     owl:someValuesFrom :Fruta
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :Contiene ;
-                                     owl:someValuesFrom :Huevo
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :Contiene ;
-                                     owl:someValuesFrom :Verdura
-                                   ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_con_carne
-:Plato_con_carne rdf:type owl:Class ;
-                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                       owl:onProperty :Contiene ;
-                                       owl:someValuesFrom :Carne
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty :Contiene ;
-                                       owl:someValuesFrom :Pescado_y_Marisco
-                                     ] ;
-                 rdfs:subClassOf :Plato ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :Contiene ;
-                                   owl:someValuesFrom :Carne
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :Contiene ;
-                                   owl:someValuesFrom :Pescado_y_Marisco
-                                 ] .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_no_vegetariano
-:Plato_no_vegetariano rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( :Plato
-                                                                 [ rdf:type owl:Class ;
-                                                                   owl:complementOf :Plato_Vegetariano
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf :Plato .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Plato_sin_carne
-:Plato_sin_carne rdf:type owl:Class ;
-                 owl:equivalentClass [ owl:intersectionOf ( :Plato
-                                                            [ rdf:type owl:Class ;
-                                                              owl:complementOf :Plato_con_carne
-                                                            ]
-                                                          ) ;
-                                       rdf:type owl:Class
-                                     ] ;
-                 rdfs:subClassOf :Plato .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Proteina
-:Proteina rdf:type owl:Class ;
-          rdfs:subClassOf :Comida .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#SemiAcido
-:SemiAcido rdf:type owl:Class ;
-           rdfs:subClassOf :Fruta .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Semidulce
-:Semidulce rdf:type owl:Class ;
-           rdfs:subClassOf :Fruta .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Semigraso
-:Semigraso rdf:type owl:Class ;
-           rdfs:subClassOf :Pescado .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tamaño
-:Tamaño rdf:type owl:Class ;
-        rdfs:subClassOf :Huevo .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tuberculo
-:Tuberculo rdf:type owl:Class ;
-           rdfs:subClassOf :Tuberculo_Legumbre_Frutoseco .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tuberculo_Legumbre_Frutoseco
-:Tuberculo_Legumbre_Frutoseco rdf:type owl:Class ;
-                              rdfs:subClassOf :Comida .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Verdura
-:Verdura rdf:type owl:Class ;
-         rdfs:subClassOf :Comida .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco> ;
+                                                                    rdfs:label "Alimento mediterraneo, normalmente se usa de acompañante, entrada o en platos especificos"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marron
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marron> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color> ;
+                                                                   rdfs:label "Huevos de color marron principalmente provenientes de gallinas"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Molusco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Molusco> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco> ;
+                                                                    rdfs:label "Animal marino invertebrado comestible"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Neutra
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Neutra> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
+                                                                   rdfs:label "Sabor que no es Acido ni Dulce"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo> ;
+                                                                 rdfs:label "Cocida a la brasa, al vapor, en caldo, tostada, salteada, frita, la patata sirve de ingrediente principal, de acompañamiento a otros alimentos o interviene como ingrediente en la composición de diversos alimentos"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papitas_fritas
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papitas_fritas> rdf:type owl:Class ;
+                                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                 owl:maxQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                                                                                 owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa>
+                                                                                               ] ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ;
+                                                                           rdfs:label "Plato conformado principalmente por papas, las cueles convencionalmente se fritan en aceite de girasol."@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco> ;
+                                                                    rdfs:label "Alimento mediterraneo mas convencional"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_azul
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_azul> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> ;
+                                                                         rdfs:label "Es aquel con una proporción de grasa inserta entre los músculos superior al 6 %. La denominación azul no atiende a criterios biológicos, sino nutricionales"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_blanco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_blanco> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> ;
+                                                                           rdfs:label "el pescado blanco o magro contiene aproximadamente solo un 2 %"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina> ;
+                                                                              rdfs:label "Alimentos de origen animal provenientes del oceano y rios"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Picada_carne
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Picada_carne> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                           owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                                               owl:unionOf ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_blanca>
+                                                                                                                             <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_roja>
+                                                                                                                           )
+                                                                                                             ]
+                                                                                         ] ;
+                                                                         rdfs:label "Plato conformado por diferentes tipos de proteinas, principalmente carnes rojas y blancas."@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                  rdfs:label "Un plato o platillo es una preparación culinaria que es servida para ser consumida"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegano
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegano> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta>
+                                                                                         ] ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura>
+                                                                                         ] ;
+                                                                         rdfs:label "Opción para las personas que no consumen ningun producto de origen animal"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegetariano
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegetariano> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura>
+                                                                                              ] ;
+                                                                              rdfs:label "Opción para las personas que no consumen carne, la cual puede tener un suplente como la torta de lentejas o en su defecto no llevarlo"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_con_carne
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_con_carne> rdf:type owl:Class ;
+                                                                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                  owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                                  owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco>
+                                                                                                ] ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                              owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne>
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
+                                                                                              owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco>
+                                                                                            ] ;
+                                                                            rdfs:label "Plato conformado principalmente por carne"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_no_vegetariano
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_no_vegetariano> rdf:type owl:Class ;
+                                                                                 owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato>
+                                                                                                                            [ rdf:type owl:Class ;
+                                                                                                                              owl:complementOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegetariano>
+                                                                                                                            ]
+                                                                                                                          ) ;
+                                                                                                       rdf:type owl:Class
+                                                                                                     ] ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ;
+                                                                                 rdfs:label "Plato conformado principalmente por ensalada, carne, arroz y papa"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_sin_carne
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_sin_carne> rdf:type owl:Class ;
+                                                                            owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato>
+                                                                                                                       [ rdf:type owl:Class ;
+                                                                                                                         owl:complementOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_con_carne>
+                                                                                                                       ]
+                                                                                                                     ) ;
+                                                                                                  rdf:type owl:Class
+                                                                                                ] ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegano> ;
+                                                                            rdfs:label "Plato conformado principalmente por arroz, ensalada y papa."@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                     rdfs:label "Es el tejido animal, principalmente muscular, que se consume como alimento"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#SemiAcido
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#SemiAcido> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
+                                                                      rdfs:label "Sabor un poco Acido"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semidulce
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semidulce> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
+                                                                      rdfs:label "Sabor un poco Dulce"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semigraso
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semigraso> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> ;
+                                                                      rdfs:label "Es aquel que como la lubina o la dorada, que contienen entre un 2 y un 5 % de grasa"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo> ;
+                                                                   rdfs:label "Categorización del huevo por el tamaño"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> ;
+                                                                      rdfs:label "Es un tallo subterráneo​ modificado y engrosado donde se acumulan los nutrientes de reserva para la planta"@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                                         rdfs:label "Aquellas partes subterráneas de raíces o tallos engrosados, fruos o semillas de origen vegetal para consumo humano."@es .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
+                                                                    rdfs:label "Su principal aporte son las vitaminas, minerales y la fibra. No tienen apenas proteínas ni lípidos, pero sí cierta cantidad de hidratos de carbono"@es .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Menu_carne
-:Menu_carne rdf:type owl:NamedIndividual ;
-            :Tiene :Hamburguesa_carne .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Aguacate
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Aguacate> rdf:type owl:NamedIndividual ;
+                                                                     owl:sameAs <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Palta> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/food#Menu_vegetariano
-:Menu_vegetariano rdf:type owl:NamedIndividual ;
-                  :Tiene :Hamburguesa_vegetariana .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ajo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ajo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Aguacate
-:Aguacate rdf:type owl:NamedIndividual ;
-          owl:sameAs :Palta .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Almeja
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Almeja> rdf:type owl:NamedIndividual ;
+                                                                   <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ostra> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ajo
-:Ajo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Almendra
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Almendra> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Almeja
-:Almeja rdf:type owl:NamedIndividual ;
-        :Tiene_sabor_similar :Ostra .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Anchoa
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Anchoa> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Almendra
-:Almendra rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arandano_rojo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arandano_rojo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Anchoa
-:Anchoa rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arequipe
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arequipe> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arandano_rojo
-:Arandano_rojo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arroz
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arroz> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arequipe
-:Arequipe rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arveja
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Arveja> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arroz
-:Arroz rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Atun
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Atun> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Arveja
-:Arveja rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Avena
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Avena> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Atun
-:Atun rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Bacalao
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Bacalao> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Avena
-:Avena rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Banano
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Banano> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Bacalao
-:Bacalao rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Berenjena
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Berenjena> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Banano
-:Banano rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Brocoli
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Brocoli> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Berenjena
-:Berenjena rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Caballo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Caballo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Brocoli
-:Brocoli rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cabra
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cabra> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Caballo
-:Caballo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Calamar
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Calamar> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cabra
-:Cabra rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Camaron
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Camaron> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Calamar
-:Calamar rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cangrejo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cangrejo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Camaron
-:Camaron rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cebolla
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cebolla> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cangrejo
-:Cangrejo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cerdo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cerdo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cebolla
-:Cebolla rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cerdo
-:Cerdo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereza
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereza> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereal
-:Cereal rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ciruela
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ciruela> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cereza
-:Cereza rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Coco
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Coco> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ciruela
-:Ciruela rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Conejo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Conejo> rdf:type owl:NamedIndividual ;
+                                                                   <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pollo> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Coco
-:Coco rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cordero
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cordero> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Conejo
-:Conejo rdf:type owl:NamedIndividual ;
-        :Tiene_sabor_similar :Pollo .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Curcuma
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Curcuma> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Cordero
-:Cordero rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Dorada
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Dorada> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Curcuma
-:Curcuma rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Durazno
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Durazno> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Dorada
-:Dorada rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_cesar
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_cesar> rdf:type owl:NamedIndividual ;
+                                                                           <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cebolla> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lechuga> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pollo> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Queso> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Durazno
-:Durazno rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_fruta
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_fruta> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ensalada_cesar
-:Ensalada_cesar rdf:type owl:NamedIndividual ;
-                :Contiene :Cebolla ,
-                          :Lechuga ,
-                          :Pollo ,
-                          :Queso ,
-                          :Tomate .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_simple
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_simple> rdf:type owl:NamedIndividual ;
+                                                                            <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cebolla> ,
+                                                                                                                                                 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lechuga> ,
+                                                                                                                                                 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ensalada_fruta
-:Ensalada_fruta rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_tuna
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_tuna> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cebolla> ,
+                                                                                                                                               <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lechuga> ,
+                                                                                                                                               <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Salmon> ,
+                                                                                                                                               <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ensalada_tuna
-:Ensalada_tuna rdf:type owl:NamedIndividual ;
-               :Contiene :Cebolla ,
-                         :Lechuga ,
-                         :Salmon ,
-                         :Tomate .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Espinaca
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Espinaca> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ensalda_simple
-:Ensalda_simple rdf:type owl:NamedIndividual ;
-                :Contiene :Cebolla ,
-                          :Lechuga ,
-                          :Tomate .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frambuesa
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frambuesa> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Espinaca
-:Espinaca rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frambuesa
-:Frambuesa rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Fresa
-:Fresa rdf:type owl:NamedIndividual ;
-       owl:sameAs :Frutillo .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fresa
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fresa> rdf:type owl:NamedIndividual ;
+                                                                  owl:sameAs <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frutilla> ;
+                                                                  <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frambuesa> .
 
 [ rdf:type owl:NegativePropertyAssertion ;
-   owl:sourceIndividual :Fresa ;
-   owl:assertionProperty :Tiene_color_similar ;
-   owl:targetIndividual :Coco
+   owl:sourceIndividual <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fresa> ;
+   owl:assertionProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> ;
+   owl:targetIndividual <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Coco>
  ] .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frijol
-:Frijol rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frijol
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frijol> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frutillo
-:Frutillo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frutilla
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frutilla> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Garbanzo
-:Garbanzo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Garbanzo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Garbanzo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Granada
-:Granada rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Granada
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Granada> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Guanabana
-:Guanabana rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Guanabana
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Guanabana> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Guayaba
-:Guayaba rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Guayaba
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Guayaba> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Hamburguesa_carne
-:Hamburguesa_carne rdf:type owl:NamedIndividual ;
-                   :Contiene :Lechuga ,
-                             :Res ,
-                             :Tomate .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Hamburguesa_carne
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Hamburguesa_carne> rdf:type owl:NamedIndividual ;
+                                                                              <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lechuga> ,
+                                                                                                                                                   <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Res> ,
+                                                                                                                                                   <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> ,
+                                                                                                                                                   <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trigo> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Hamburguesa_vegetariana
-:Hamburguesa_vegetariana rdf:type owl:NamedIndividual ;
-                         :Contiene :Lechuga ,
-                                   :Lenteja ,
-                                   :Tomate .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Hamburguesa_vegetariana
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Hamburguesa_vegetariana> rdf:type owl:NamedIndividual ;
+                                                                                    <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lechuga> ,
+                                                                                                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lenteja> ,
+                                                                                                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> ,
+                                                                                                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trigo> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Helado
-:Helado rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Helado
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Helado> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Higo
-:Higo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Higo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Higo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Jengibre
-:Jengibre rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Jengibre
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Jengibre> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Langosta
-:Langosta rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Langosta
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Langosta> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Leche
-:Leche rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Leche
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Leche> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Leche_condensada
-:Leche_condensada rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Leche_condensada
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Leche_condensada> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lechuga
-:Lechuga rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lechuga
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lechuga> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lenteja
-:Lenteja rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lenteja
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lenteja> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Limon
-:Limon rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Limon
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Limon> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Linguado
-:Linguado rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Linguado
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Linguado> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Lubina
-:Lubina rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lubina
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lubina> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Maiz
-:Maiz rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Maiz
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Maiz> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mandarina
-:Mandarina rdf:type owl:NamedIndividual ;
-           :Tiene_color_similar :Limon ;
-           :Tiene_sabor_similar :Naranja .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mandarina
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mandarina> rdf:type owl:NamedIndividual ;
+                                                                      <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Limon> ;
+                                                                      <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Naranja> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mango
-:Mango rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mango
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mango> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mani
-:Mani rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mani
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mani> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Manzana_roja
-:Manzana_roja rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Manzana_roja
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Manzana_roja> rdf:type owl:NamedIndividual ;
+                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fresa> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Manzana_verde
-:Manzana_verde rdf:type owl:NamedIndividual ;
-               :Tiene_color_similar :Brocoli ,
-                                    :Sandia .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Manzana_verde
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Manzana_verde> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Brocoli> ,
+                                                                                                                                                          <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Sandia> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Maracuya
-:Maracuya rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Maracuya
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Maracuya> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Melon
-:Melon rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Melon
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Melon> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Merlusa
-:Merlusa rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Menu_carne
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Menu_carne> rdf:type owl:NamedIndividual ;
+                                                                       <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_cesar> ,
+                                                                                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_tuna> ,
+                                                                                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Hamburguesa_carne> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Mora
-:Mora rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Menu_vegetariano
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Menu_vegetariano> rdf:type owl:NamedIndividual ;
+                                                                             <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_fruta> ,
+                                                                                                                                               <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_simple> ,
+                                                                                                                                               <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Hamburguesa_vegetariana> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Naranja
-:Naranja rdf:type owl:NamedIndividual ;
-         :Tiene_color_similar :Mandarina ;
-         :Tiene_sabor_similar :Mandarina .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Merlusa
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Merlusa> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Nuez
-:Nuez rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mora
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mora> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ostra
-:Ostra rdf:type owl:NamedIndividual ;
-       :Tiene_sabor_similar :Almeja .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Naranja
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Naranja> rdf:type owl:NamedIndividual ;
+                                                                    <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mandarina> ;
+                                                                    <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mandarina> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Palta
-:Palta rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nuez
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nuez> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa_criolla
-:Papa_criolla rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ostra
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ostra> rdf:type owl:NamedIndividual ;
+                                                                  <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Almeja> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papa_negra
-:Papa_negra rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Palta
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Palta> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Papaya
-:Papaya rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa_criolla
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa_criolla> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pavo
-:Pavo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa_negra
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa_negra> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pepino
-:Pepino rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papaya
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papaya> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pera
-:Pera rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pavo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pavo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pistacho
-:Pistacho rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pepino
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pepino> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Piña
-:Piña rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pera
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pera> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pollo
-:Pollo rdf:type owl:NamedIndividual ;
-       :Tiene_sabor_similar :Conejo .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pistacho
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pistacho> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Pulpo
-:Pulpo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Piña
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Piña> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Queso
-:Queso rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pollo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pollo> rdf:type owl:NamedIndividual ;
+                                                                  <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_sabor_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Conejo> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ravano
-:Ravano rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pulpo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pulpo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Remolacha
-:Remolacha rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Queso
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Queso> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Repollo
-:Repollo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ravano
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ravano> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Res
-:Res rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Remolacha
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Remolacha> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Salmon
-:Salmon rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Repollo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Repollo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Sandia
-:Sandia rdf:type owl:NamedIndividual ;
-        :Tiene_color_similar :Manzana_verde .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Res
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Res> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Sardina
-:Sardina rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Salmon
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Salmon> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Semilla_girasol
-:Semilla_girasol rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Sandia
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Sandia> rdf:type owl:NamedIndividual ;
+                                                                   <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene_color_similar> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Manzana_verde> .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ternera
-:Ternera rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Sardina
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Sardina> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Tomate
-:Tomate rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semilla_girasol
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semilla_girasol> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Toronja
-:Toronja rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ternera
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ternera> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Trigo
-:Trigo rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Trucha
-:Trucha rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Toronja
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Toronja> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Uva
-:Uva rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trigo
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trigo> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Yuca
-:Yuca rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trucha
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trucha> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Zanahoria
-:Zanahoria rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Uva
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Uva> rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Ñame
-:Ñame rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Yuca
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Yuca> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Zanahoria
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Zanahoria> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ñame
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ñame> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal> rdfs:label "Son plantas de la familia de las poáceas cultivadas por su grano"@es .
 
 
 #################################################################
@@ -881,24 +961,24 @@
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Fruta
-                :Grano
-                :Lacteos_y_Derivado
-                :Plato
-                :Proteina
-                :Tuberculo_Legumbre_Frutoseco
-                :Verdura
+  owl:members ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura>
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Fruta
-                :Grano
-                :Lacteos_y_Derivado
-                :Proteina
-                :Tuberculo_Legumbre_Frutoseco
-                :Verdura
+  owl:members ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco>
+                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura>
               )
 ] .
 
