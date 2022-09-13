@@ -596,6 +596,12 @@
 :Fresa rdf:type owl:NamedIndividual ;
        owl:sameAs :Frutillo .
 
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :Fresa ;
+   owl:assertionProperty :Tiene_color_similar ;
+   owl:targetIndividual :Coco
+ ] .
+
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/videogames#Frijol
 :Frijol rdf:type owl:NamedIndividual .
