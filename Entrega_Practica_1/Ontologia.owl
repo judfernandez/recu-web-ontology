@@ -84,6 +84,10 @@
 #    Classes
 #################################################################
 
+###  http://purl.org/foodontology#FoodAdditive
+<http://purl.org/foodontology#FoodAdditive> rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#A
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#A> rdf:type owl:Class ;
                                                               rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
@@ -104,7 +108,11 @@
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Acido
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Acido> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nivel_de_acidez> ;
+                                                                                    owl:someValuesFrom xsd:integer
+                                                                                  ] ;
                                                                   rdfs:label "Es uno de los cinco sabores básicos detectados por las papilas gustativas de la lengua"@es .
 
 
@@ -455,7 +463,11 @@
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#SemiAcido
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#SemiAcido> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nivel_de_acidez> ;
+                                                                                        owl:someValuesFrom xsd:integer
+                                                                                      ] ;
                                                                       rdfs:label "Sabor un poco Acido"@es .
 
 
