@@ -667,7 +667,13 @@
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_fruta
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_fruta> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_fruta> rdf:type owl:NamedIndividual ;
+                                                                           <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereza> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fresa> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Mango> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Manzana_roja> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Manzana_verde> ,
+                                                                                                                                                <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Piña> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_simple
@@ -1004,39 +1010,48 @@
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ternera
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ternera> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ternera> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_roja> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tomate> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Toronja
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Toronja> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Toronja> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Acido> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trigo
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trigo> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trigo> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Harina> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trucha
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trucha> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Trucha> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semigraso> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Uva
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Uva> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Uva> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semidulce> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Yuca
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Yuca> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Yuca> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Zanahoria
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Zanahoria> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Zanahoria> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo> .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ñame
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ñame> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ñame> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo> .
 
 
 #################################################################
