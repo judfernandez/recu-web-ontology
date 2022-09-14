@@ -24,6 +24,7 @@
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene> rdf:type owl:ObjectProperty ;
                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                  owl:inverseOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#hace_Parte_De> ;
                                                                   owl:propertyChainAxiom ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tiene>
                                                                                            <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene>
                                                                                          ) ;
@@ -980,6 +981,14 @@
                 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco>
                 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura>
               )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pollo>
+                        <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Res>
+                        <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Salmon>
+                      )
 ] .
 
 
