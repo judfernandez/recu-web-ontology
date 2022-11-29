@@ -91,19 +91,22 @@
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#A
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#A> rdf:type owl:Class ;
                                                               rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
-                                                              rdfs:label "Es el tamaño mas pequeño de huevos"@es .
+                                                              rdfs:comment "Es el tamaño mas pequeño de huevos" ;
+                                                              rdfs:label "A"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#AA
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#AA> rdf:type owl:Class ;
                                                                rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
-                                                               rdfs:label "Es el tamaño mas comun de huevos"@es .
+                                                               rdfs:comment "Es el tamaño mas comun de huevos" ;
+                                                               rdfs:label "AA"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#AAA
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#AAA> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
-                                                                rdfs:label "Es el tamaño mas grande de huevos de gallina"@es .
+                                                                rdfs:comment "Es el tamaño mas grande de huevos de gallina" ;
+                                                                rdfs:label "AAA"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Acido
@@ -113,13 +116,15 @@
                                                                                     owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nivel_de_acidez> ;
                                                                                     owl:someValuesFrom xsd:integer
                                                                                   ] ;
-                                                                  rdfs:label "Es uno de los cinco sabores básicos detectados por las papilas gustativas de la lengua"@es .
+                                                                  rdfs:comment "Es uno de los cinco sabores básicos detectados por las papilas gustativas de la lengua" ;
+                                                                  rdfs:label "Acido"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#B
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#B> rdf:type owl:Class ;
                                                               rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
-                                                              rdfs:label "Es el tamaño mas pequeño de huevos de gallina"@es .
+                                                              rdfs:comment "Es el tamaño mas pequeño de huevos de gallina" ;
+                                                              rdfs:label "B"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Barra_de_quesos
@@ -130,37 +135,43 @@
                                                                                               owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
                                                                                               owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Derivado>
                                                                                             ] ;
-                                                                            rdfs:label "Plato conformado por diferentes tipos de quesos"@es .
+                                                                            rdfs:comment "Plato conformado por diferentes tipos de quesos" ;
+                                                                            rdfs:label "Barra de quesos"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Blanco
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Blanco> rdf:type owl:Class ;
                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color> ;
-                                                                   rdfs:label "Huevos de color blanco principalmente provenientes de gallinas"@es .
+                                                                   rdfs:comment "Huevos de color blanco principalmente provenientes de gallinas" ;
+                                                                   rdfs:label "Blanco"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#C
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#C> rdf:type owl:Class ;
                                                               rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
-                                                              rdfs:label "Es el tamaño de huevos provenientes de aves pequeñas como el de codornis"@es .
+                                                              rdfs:comment "Es el tamaño de huevos provenientes de aves pequeñas como el de codornis" ;
+                                                              rdfs:label "C"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina> ;
-                                                                  rdfs:label "Normalmente tejido muscular proveniente de algun animal"@es .
+                                                                  rdfs:comment "Normalmente tejido muscular proveniente de algun animal" ;
+                                                                  rdfs:label "Carne"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_blanca
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_blanca> rdf:type owl:Class ;
                                                                          rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne> ;
-                                                                         rdfs:label "Carnes de origen animal diferentes a la res y el cerdo, se reconocen por su tonalidad blanca."@es .
+                                                                         rdfs:comment "Carnes de origen animal diferentes a la res y el cerdo, se reconocen por su tonalidad blanca." ;
+                                                                         rdfs:label "Carne Blanca"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_roja
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne_roja> rdf:type owl:Class ;
                                                                        rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Carne> ;
-                                                                       rdfs:label "Comunmente se refiere a carnes provenientes de la res o el cerdo se reconocen por su tonalidad rojiza"@es .
+                                                                       rdfs:comment "Comunmente se refiere a carnes provenientes de la res o el cerdo se reconocen por su tonalidad rojiza" ;
+                                                                       rdfs:label "Carne Roja"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal
@@ -171,18 +182,21 @@
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo> ;
-                                                                  rdfs:label "Categorización del huevo por la tonalidad de la cascara"@es .
+                                                                  rdfs:comment "Categorización del huevo por la tonalidad de la cascara" ;
+                                                                  rdfs:label "Color"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> rdf:type owl:Class ;
-                                                                   rdfs:label "cualquier sustancia consumida para proporcionar apoyo nutricional a un ser vivo"@es .
+                                                                   rdfs:comment "cualquier sustancia consumida para proporcionar apoyo nutricional a un ser vivo" ;
+                                                                   rdfs:label "Comida"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Crustaceo
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Crustaceo> rdf:type owl:Class ;
                                                                       rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco> ;
-                                                                      rdfs:label "Animales comestibles, como las langostas, los cangrejos, los langostinos, los camarones y los percebes"@es .
+                                                                      rdfs:comment "Animales comestibles, como las langostas, los cangrejos, los langostinos, los camarones y los percebes" ;
+                                                                      rdfs:label "Crustaceo"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Derivado
@@ -203,13 +217,15 @@
                                                                                        owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
                                                                                        owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo>
                                                                                      ] ;
-                                                                     rdfs:label "Plato que se sirve principalmente en horas de la mañana el cual deberia contener un fuerte componente calorico."@es .
+                                                                     rdfs:comment "Plato que se sirve principalmente en horas de la mañana el cual deberia contener un fuerte componente calorico." ;
+                                                                     rdfs:label "Desayuno"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Dulce
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Dulce> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
-                                                                  rdfs:label "Es uno de los cinco sabores básicos y de los únicos que es aceptado de manera global por todas las culturas y etnias de la tierra como uno de los sabores más placenteros"@es .
+                                                                  rdfs:comment "Es uno de los cinco sabores básicos y de los únicos que es aceptado de manera global por todas las culturas y etnias de la tierra como uno de los sabores más placenteros" ;
+                                                                  rdfs:label "Dulce"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Ensalada_de_frutas_acidas
@@ -223,31 +239,36 @@
                                                                                                         owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
                                                                                                         owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#SemiAcido>
                                                                                                       ] ;
-                                                                                      rdfs:label "Plato conformado principalmente por frutas acidas"@es .
+                                                                                      rdfs:comment "Plato conformado principalmente por frutas acidas" ;
+                                                                                      rdfs:label "Ensalada de frutas acidas"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
-                                                                  rdfs:label "Son ricas en vitaminas, sales minerales y antioxidantes"@es .
+                                                                  rdfs:comment "Son ricas en vitaminas, sales minerales y antioxidantes" ;
+                                                                  rdfs:label "Fruta"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frutoseco
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Frutoseco> rdf:type owl:Class ;
                                                                       rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> ;
-                                                                      rdfs:label "Los frutos secos son alimentos muy energéticos, ricos en grasas, en proteínas, así como en oligoelementos"@es .
+                                                                      rdfs:comment "Los frutos secos son alimentos muy energéticos, ricos en grasas, en proteínas, así como en oligoelementos" ;
+                                                                      rdfs:label "Fruto seco"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
-                                                                  rdfs:label "Semilla pequeña, dura y seca, con o sin cáscara, cosechada para consumo humano o animal"@es .
+                                                                  rdfs:comment "Semilla pequeña, dura y seca, con o sin cáscara, cosechada para consumo humano o animal" ;
+                                                                  rdfs:label "Grano"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Harina
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Harina> rdf:type owl:Class ;
                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Grano> ;
-                                                                   rdfs:label "Es el polvo fino que se obtiene del cereal molido y de otros alimentos ricos en almidón"@es .
+                                                                   rdfs:comment "Es el polvo fino que se obtiene del cereal molido y de otros alimentos ricos en almidón" ;
+                                                                   rdfs:label "Harina"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo
@@ -263,61 +284,71 @@
                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                     owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño>
                                                                                   ] ;
-                                                                  rdfs:label "Alimento alto en proteina proveniente de la gallina y otras aves."@es .
+                                                                  rdfs:comment "Alimento alto en proteina proveniente de la gallina y otras aves." ;
+                                                                  rdfs:label "Huevo"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Jumbo
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Jumbo> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> ;
-                                                                  rdfs:label "Es el tamaño mas grande  de huevos"@es .
+                                                                  rdfs:comment "Es el tamaño mas grande  de huevos" ;
+                                                                  rdfs:label "Jumbo"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos> rdf:type owl:Class ;
                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado> ;
-                                                                    rdfs:label "Que provienen de la leche, principalmente de origen animal."@es .
+                                                                    rdfs:comment "Que provienen de la leche, principalmente de origen animal." ;
+                                                                    rdfs:label "Lacteos"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Lacteos_y_Derivado> rdf:type owl:Class ;
                                                                                rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
-                                                                               rdfs:label "Son productos altamente perecederos que deben mantener rigurosamente la cadena de frío"@es .
+                                                                               rdfs:comment "Son productos altamente perecederos que deben mantener rigurosamente la cadena de frío" ;
+                                                                               rdfs:label "Lacteos y Derivados"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Legumbre
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Legumbre> rdf:type owl:Class ;
                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> ;
-                                                                     rdfs:label "Se denomina legumbre a la semilla contenida en las plantas de la familia de las leguminosas"@es .
+                                                                     rdfs:comment "Se denomina legumbre a la semilla contenida en las plantas de la familia de las leguminosas" ;
+                                                                     rdfs:label "Legumbre"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco> rdf:type owl:Class ;
                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco> ;
-                                                                    rdfs:label "Alimento mediterraneo, normalmente se usa de acompañante, entrada o en platos especificos"@es .
+                                                                    rdfs:comment "Alimento mediterraneo, normalmente se usa de acompañante, entrada o en platos especificos" ;
+                                                                    rdfs:label "Marisco"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marron
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marron> rdf:type owl:Class ;
                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Color> ;
-                                                                   rdfs:label "Huevos de color marron principalmente provenientes de gallinas"@es .
+                                                                   rdfs:comment "Huevos de color marron principalmente provenientes de gallinas" ;
+                                                                   rdfs:label "Marron"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Molusco
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Molusco> rdf:type owl:Class ;
                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Marisco> ;
-                                                                    rdfs:label "Animal marino invertebrado comestible"@es .
+                                                                    rdfs:comment "Animal marino invertebrado comestible" ;
+                                                                    rdfs:label "Molusco"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Neutra
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Neutra> rdf:type owl:Class ;
                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
-                                                                   rdfs:label "Sabor que no es Acido ni Dulce"@es .
+                                                                   rdfs:comment "Sabor que no es Acido ni Dulce" ;
+                                                                   rdfs:label "Neutra"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa> rdf:type owl:Class ;
                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo> ;
-                                                                 rdfs:label "Cocida a la brasa, al vapor, en caldo, tostada, salteada, frita, la patata sirve de ingrediente principal, de acompañamiento a otros alimentos o interviene como ingrediente en la composición de diversos alimentos"@es .
+                                                                 rdfs:comment "Cocida a la brasa, al vapor, en caldo, tostada, salteada, frita, la patata sirve de ingrediente principal, de acompañamiento a otros alimentos o interviene como ingrediente en la composición de diversos alimentos" ;
+                                                                 rdfs:label "Papa"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papitas_fritas
@@ -328,31 +359,36 @@
                                                                                                  owl:onClass <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Papa>
                                                                                                ] ;
                                                                            rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ;
-                                                                           rdfs:label "Plato conformado principalmente por papas, las cueles convencionalmente se fritan en aceite de girasol."@es .
+                                                                           rdfs:comment "Plato conformado principalmente por papas, las cueles convencionalmente se fritan en aceite de girasol." ;
+                                                                           rdfs:label "Papitas fritas"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> rdf:type owl:Class ;
                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco> ;
-                                                                    rdfs:label "Alimento mediterraneo mas convencional"@es .
+                                                                    rdfs:comment "Alimento mediterraneo mas convencional" ;
+                                                                    rdfs:label "Pescado"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_azul
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_azul> rdf:type owl:Class ;
                                                                          rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> ;
-                                                                         rdfs:label "Es aquel con una proporción de grasa inserta entre los músculos superior al 6 %. La denominación azul no atiende a criterios biológicos, sino nutricionales"@es .
+                                                                         rdfs:comment "Es aquel con una proporción de grasa inserta entre los músculos superior al 6 %. La denominación azul no atiende a criterios biológicos, sino nutricionales" ;
+                                                                         rdfs:label "Pescado Azul"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_blanco
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_blanco> rdf:type owl:Class ;
                                                                            rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> ;
-                                                                           rdfs:label "el pescado blanco o magro contiene aproximadamente solo un 2 %"@es .
+                                                                           rdfs:comment "el pescado blanco o magro contiene aproximadamente solo un 2 %" ;
+                                                                           rdfs:label "Pescado Blanco"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco> rdf:type owl:Class ;
                                                                               rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina> ;
-                                                                              rdfs:label "Alimentos de origen animal provenientes del oceano y rios"@es .
+                                                                              rdfs:comment "Alimentos de origen animal provenientes del oceano y rios" ;
+                                                                              rdfs:label "Pescados y Mariscos"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Picada_carne
@@ -366,13 +402,15 @@
                                                                                                                            )
                                                                                                              ]
                                                                                          ] ;
-                                                                         rdfs:label "Plato conformado por diferentes tipos de proteinas, principalmente carnes rojas y blancas."@es .
+                                                                         rdfs:comment "Plato conformado por diferentes tipos de proteinas, principalmente carnes rojas y blancas." ;
+                                                                         rdfs:label "Picada de carne"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
-                                                                  rdfs:label "Un plato o platillo es una preparación culinaria que es servida para ser consumida"@es .
+                                                                  rdfs:comment "Un plato o platillo es una preparación culinaria que es servida para ser consumida" ;
+                                                                  rdfs:label "Plato"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegano
@@ -386,7 +424,8 @@
                                                                                            owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
                                                                                            owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura>
                                                                                          ] ;
-                                                                         rdfs:label "Opción para las personas que no consumen ningun producto de origen animal"@es .
+                                                                         rdfs:comment "Opción para las personas que no consumen ningun producto de origen animal" ;
+                                                                         rdfs:label "Plato Vegano"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegetariano
@@ -404,7 +443,8 @@
                                                                                                 owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
                                                                                                 owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura>
                                                                                               ] ;
-                                                                              rdfs:label "Opción para las personas que no consumen carne, la cual puede tener un suplente como la torta de lentejas o en su defecto no llevarlo"@es .
+                                                                              rdfs:comment "Opción para las personas que no consumen carne, la cual puede tener un suplente como la torta de lentejas o en su defecto no llevarlo" ;
+                                                                              rdfs:label "Plato Vegetariano"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_con_carne
@@ -426,7 +466,8 @@
                                                                                               owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Contiene> ;
                                                                                               owl:someValuesFrom <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado_y_Marisco>
                                                                                             ] ;
-                                                                            rdfs:label "Plato conformado principalmente por carne"@es .
+                                                                            rdfs:comment "Plato conformado principalmente por carne" ;
+                                                                            rdfs:label "Plato con carne"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_no_vegetariano
@@ -439,7 +480,8 @@
                                                                                                        rdf:type owl:Class
                                                                                                      ] ;
                                                                                  rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato> ;
-                                                                                 rdfs:label "Plato conformado principalmente por ensalada, carne, arroz y papa"@es .
+                                                                                 rdfs:comment "Plato conformado principalmente por ensalada, carne, arroz y papa" ;
+                                                                                 rdfs:label "Plato no vegetariano"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_sin_carne
@@ -452,13 +494,15 @@
                                                                                                   rdf:type owl:Class
                                                                                                 ] ;
                                                                             rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Plato_Vegano> ;
-                                                                            rdfs:label "Plato conformado principalmente por arroz, ensalada y papa."@es .
+                                                                            rdfs:comment "Plato conformado principalmente por arroz, ensalada y papa." ;
+                                                                            rdfs:label "Plato sin carne"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Proteina> rdf:type owl:Class ;
                                                                      rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
-                                                                     rdfs:label "Es el tejido animal, principalmente muscular, que se consume como alimento"@es .
+                                                                     rdfs:comment "Es el tejido animal, principalmente muscular, que se consume como alimento" ;
+                                                                     rdfs:label "Proteina"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#SemiAcido
@@ -468,43 +512,50 @@
                                                                                         owl:onProperty <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Nivel_de_acidez> ;
                                                                                         owl:someValuesFrom xsd:integer
                                                                                       ] ;
-                                                                      rdfs:label "Sabor un poco Acido"@es .
+                                                                      rdfs:comment "Sabor un poco Acido" ;
+                                                                      rdfs:label "SemiAcido"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semidulce
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semidulce> rdf:type owl:Class ;
                                                                       rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Fruta> ;
-                                                                      rdfs:label "Sabor un poco Dulce"@es .
+                                                                      rdfs:comment "Sabor un poco Dulce" ;
+                                                                      rdfs:label "SemiDulce"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semigraso
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Semigraso> rdf:type owl:Class ;
                                                                       rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Pescado> ;
-                                                                      rdfs:label "Es aquel que como la lubina o la dorada, que contienen entre un 2 y un 5 % de grasa"@es .
+                                                                      rdfs:comment "Es aquel que como la lubina o la dorada, que contienen entre un 2 y un 5 % de grasa" ;
+                                                                      rdfs:label "Semigraso"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tamaño> rdf:type owl:Class ;
                                                                    rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Huevo> ;
-                                                                   rdfs:label "Categorización del huevo por el tamaño"@es .
+                                                                   rdfs:comment "Categorización del huevo por el tamaño" ;
+                                                                   rdfs:label "Tamaño"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo> rdf:type owl:Class ;
                                                                       rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> ;
-                                                                      rdfs:label "Es un tallo subterráneo​ modificado y engrosado donde se acumulan los nutrientes de reserva para la planta"@es .
+                                                                      rdfs:comment "Es un tallo subterráneo​ modificado y engrosado donde se acumulan los nutrientes de reserva para la planta" ;
+                                                                      rdfs:label "Tuberculo"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Tuberculo_Legumbre_Frutoseco> rdf:type owl:Class ;
                                                                                          rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
-                                                                                         rdfs:label "Aquellas partes subterráneas de raíces o tallos engrosados, fruos o semillas de origen vegetal para consumo humano."@es .
+                                                                                         rdfs:comment "Aquellas partes subterráneas de raíces o tallos engrosados, fruos o semillas de origen vegetal para consumo humano." ;
+                                                                                         rdfs:label "Tuberculo, Legumbre, Fruto seco"@es .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura
 <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Verdura> rdf:type owl:Class ;
                                                                     rdfs:subClassOf <http://www.semanticweb.org/joker/ontologies/2022/7/comida#Comida> ;
-                                                                    rdfs:label "Su principal aporte son las vitaminas, minerales y la fibra. No tienen apenas proteínas ni lípidos, pero sí cierta cantidad de hidratos de carbono"@es .
+                                                                    rdfs:comment "Su principal aporte son las vitaminas, minerales y la fibra. No tienen apenas proteínas ni lípidos, pero sí cierta cantidad de hidratos de carbono" ;
+                                                                    rdfs:label "Verdura"@es .
 
 
 #################################################################
@@ -1081,7 +1132,8 @@
 #    Annotations
 #################################################################
 
-<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal> rdfs:label "Son plantas de la familia de las poáceas cultivadas por su grano"@es .
+<http://www.semanticweb.org/joker/ontologies/2022/7/comida#Cereal> rdfs:comment "Son plantas de la familia de las poáceas cultivadas por su grano" ;
+                                                                   rdfs:label "Cereal"@es .
 
 
 #################################################################
