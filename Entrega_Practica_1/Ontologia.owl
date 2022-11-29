@@ -85,7 +85,9 @@
 #################################################################
 
 ###  http://purl.org/foodontology#FoodAdditive
-<http://purl.org/foodontology#FoodAdditive> rdf:type owl:Class .
+<http://purl.org/foodontology#FoodAdditive> rdf:type owl:Class ;
+                                            rdfs:comment "Aliementos que se utilizan como acompañamiento de los principales" ;
+                                            rdfs:label "Adiciones" .
 
 
 ###  http://www.semanticweb.org/joker/ontologies/2022/7/comida#A
